@@ -1,0 +1,8 @@
+8460a1e208727466f3c79339c20758c62a6ba755e674c7dafe98864fe4da6a9d  lab2/src/test/java/ar/uba/fi/compiladores/parte1/DerivationsTest.java
+410e6696ea36859227ef725538417e291c1e0edd6ba8d018f04f59bc55581d7e  lab2/src/test/java/ar/uba/fi/compiladores/parte2/ManualParserTest.java
+77086a10e083fe171d30f3ecd0f6a28ab7c1897228772254bfb3957c07213cd5  lab2/src/test/java/ar/uba/fi/compiladores/parte3/AutomaticParserTest.java
+a7f7b90fac79dfc8f3e4a288650548725a0d879f2f916cbcf250f03929d402e7  lab2/src/test/java/ar/uba/fi/compiladores/parte4/CompiLispParserTest.java
+9078ec9137710fe5b411f4d86866b699016666654230e2417b75ac13016bea02  lab2/src/test/java/ar/uba/fi/compiladores/parte5/AdditionCalcTest.java
+c74fc9fdfab38c862978ba8d8a2458ac4e55d0072ec515c7a91411dca0f987c2  lab2/src/test/java/ar/uba/fi/compiladores/parte5/MultiplicationCalcTest.java
+de035578f212815dcfd689e1f451cd353455d0ebbdd5477e1adf4dd6ac737b67  lab2/src/test/java/ar/uba/fi/compiladores/parte6/CompiLispTest.java
+cd4e77b9216e96259af60a9d644bf05e3411d83d772404c74e4323659e4f18f0  lab2/pom.xml
