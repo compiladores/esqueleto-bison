@@ -1,5 +1,4 @@
-# lab2
-Template repo para el lab 2 de la materia Compiladores y Lenguajes de Programación
+# esqueleto-bison
 
 ## Ejecución
 1. instalar esta extensión de vscode: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
