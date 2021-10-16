@@ -22,6 +22,8 @@
 /* Grammar follows */
 %%
 
+/* ¿Cómo podemos agregar una suma acá? */
+
 exp:
   COMMA exp                       { $$ = value = $2.floatValue(); }
 | ZERO                            { $$ = value = 0; }
