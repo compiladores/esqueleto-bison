@@ -1,0 +1,20 @@
+package ar.uba.fi.compiladores.Lang5;
+import ar.uba.fi.compiladores.JFlexLexerHelper;
+%%
+
+%public
+%class CalcomplejaLexer
+%unicode
+%implements Calcompleja.Lexer
+%extends JFlexLexerHelper
+%int 
+
+%%
+
+"("         { return L_PAREN; }
+")"         { return R_PAREN; }
+"*"         { return TIMES; }
+"+"         { return PLUS; }
+[0-9]+      { return NUMBER; }
+"print"     { return PRINT;  }
+[^]  {  }
