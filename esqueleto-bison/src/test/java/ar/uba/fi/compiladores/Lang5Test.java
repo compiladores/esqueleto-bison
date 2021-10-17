@@ -23,6 +23,6 @@ public class Lang5Test {
     }
     @Test
     void testComplex() throws IOException{
-        assertEquals("1 2 + 2 3 * 35 + + .", transpile("print (1+2)+2*3+(35)"));
+        assertEquals("1 2 + 2 3 * 3 5 + + + .", transpile("print (1+2)+2*3+(3+5)"));
     }
 }
