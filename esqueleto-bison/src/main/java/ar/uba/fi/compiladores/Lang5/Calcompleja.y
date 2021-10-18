@@ -11,7 +11,9 @@
 %token PLUS
 %token NUMBER
 %token PRINT
-
+%token SEMICOLON
+%token ASSIGN
+%token VARIABLE
 %code {
   public String program;
 }
@@ -20,8 +22,17 @@
 %%
 
 top: 
-  PRINT term       { $$ = program = $2 + ".";}
+  stmt_list       { $$ = program = $1;}
 ;
+stmt_list:        { $$ = "";}
+| stmt stmt_list  { $$ = $1 + $2;}
+;
+
+stmt:
+  PRINT term SEMICOLON     { $$ = $2 +". ";}
+| VARIABLE ASSIGN term SEMICOLON     { $$ = " SYMBOL: " + $1+ " "+ $3+ " "+$1+" set-global " ;}
+;
+
 term:
   factor PLUS term   { $$ =  $1 + $3 + "+ "; }
 | factor            { $$ = $1; }
@@ -31,6 +42,7 @@ factor:
   L_PAREN term R_PAREN    { $$ = $2; }
 | NUMBER TIMES factor     { $$ = $1 +" "+ $3 + "* "; }
 | NUMBER                  { $$ = $1 + " "; }
+| VARIABLE                { $$ = $1 + " get-global "; }
 ;
 
 %%

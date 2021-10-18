@@ -17,4 +17,7 @@ import ar.uba.fi.compiladores.JFlexLexerHelper;
 "+"         { return PLUS; }
 [0-9]+      { return NUMBER; }
 "print"     { return PRINT;  }
+[A-Za-z]+   { return VARIABLE; }
+"="         { return ASSIGN; }
+";"         { return SEMICOLON; }
 [^]  {  }

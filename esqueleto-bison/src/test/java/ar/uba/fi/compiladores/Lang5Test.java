@@ -22,6 +22,10 @@ public class Lang5Test {
         assertEquals("1 2 + .", transpile("print 1 + 2"));
     }
     @Test
+    void testAssign() throws IOException{
+        assertEquals(" SYMBOL: a 1 2 +  a set-global  SYMBOL: b 4 a get-global +  b set-global a get-global . b get-global . ", transpile("a = 1 + 2; b = 4 + a; print a; print b;"));
+    }
+    @Test
     void testComplex() throws IOException{
         assertEquals("1 2 + 2 3 * 3 5 + + + .", transpile("print (1+2)+2*3+(3+5)"));
     }

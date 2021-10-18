@@ -20,11 +20,18 @@ public class Lang2Test {
         list.add(yylexer.new Token(WrainforkLexer.COMMA));
         list.add(yylexer.new Token(WrainforkLexer.COMMA));
         list.add(yylexer.new Token(WrainforkLexer.L_BRACES));
-        list.add(yylexer.new Token(WrainforkLexer.NUMBER,"1"));
+        list.add(yylexer.new Token(WrainforkLexer.ONE));
+        list.add(yylexer.new Token(WrainforkLexer.SLASH));
+        list.add(yylexer.new Token(WrainforkLexer.COMMA));
+        list.add(yylexer.new Token(WrainforkLexer.COMMA));
+        list.add(yylexer.new Token(WrainforkLexer.COMMA));
+        list.add(yylexer.new Token(WrainforkLexer.COMMA));
+        list.add(yylexer.new Token(WrainforkLexer.ZERO));
         list.add(yylexer.new Token(WrainforkLexer.SLASH));
         list.add(yylexer.new Token(WrainforkLexer.NUMBER,"0.2"));
         list.add(yylexer.new Token(WrainforkLexer.R_BRACES));
         list.add(yylexer.new Token(WrainforkLexer.EOF));
+        // ,,,[1/,,,,0/0.2]
         Wrainfork parser = new Wrainfork(yylexer);
         parser.parse();
         assertEquals("[1 / 0.2]", parser.value);

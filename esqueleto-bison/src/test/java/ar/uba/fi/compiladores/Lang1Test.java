@@ -27,6 +27,7 @@ public class Lang1Test {
         list.add(yylexer.new Token(WrainfuckLexer.EOF));
         Wrainfuck parser = new Wrainfuck(yylexer);
         parser.parse();
+        // ,,, [1 / 0.2]
         assertEquals(5.0, parser.value.floatValue(),0.001);
     }    
 }

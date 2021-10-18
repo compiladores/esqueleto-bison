@@ -23,10 +23,10 @@
 %%
 
 exp:
-  COMMA exp                       { $$ = value = $2; }
+  COMMA exp                       { $$ = value = "-" +$2; }
 | ZERO                            { $$ = value = "0"; }
 | L_PAREN exp COMMA div R_PAREN   { $$ = value = "("+$2+" * "+$4+")"; }
-| L_BRACES div SLASH div R_BRACES { $$ = value = "["+$2+" / "+$4+"]"; }
+| L_BRACES div SLASH div R_BRACES { $$ = value = "{"+$2+" / "+$4+"}"; }
 ;
 
 div: 
