@@ -19,5 +19,9 @@ RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends bison gforth
 
+RUN wget https://downloads.factorcode.org/linux-x86-64/factor-linux-x86-64-2021-05-23-17-58.tar.gz \
+    && tar -xzf factor-linux-x86-64-2021-05-23-17-58.tar.gz \
+    && ln -s /factor/factor /bin/lfactor
+
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
